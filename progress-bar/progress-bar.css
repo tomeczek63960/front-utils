@@ -1,0 +1,32 @@
+.progress-bar {
+  height: 0.5rem;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.progress-bar__progress {
+  height: 100%;
+  width: 0%;
+  background: red;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+body {
+  padding: 100vh 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: lightgray;
+}
+
+.js-progress-section {
+  height: 400vh;
+  background: white;
+}
+/*# sourceMappingURL=progress-bar.css.map */

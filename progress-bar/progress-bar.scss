@@ -1,0 +1,26 @@
+.progress-bar {
+  height: 0.5rem;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  transition: 0.4s;
+  &__progress {
+    height: 100%;
+    width: 0%;
+    background: red;
+    transition: 0.4s;
+  }
+}
+
+body {
+  padding: 100vh 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: lightgray;
+}
+.js-progress-section {
+  height: 400vh;
+  background: white;
+}

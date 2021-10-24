@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio player</title>
+  <link rel="stylesheet" href="./audio-palyer.css">
+</head>
+<body>
+
+  <section class="audio">
+    <audio controls>
+        <source src="./sample.mp3"  type="audio/mp3">
+    </audio>
+    <div class="audio-player" data-url="./sample.mp3">
+        <div class="timeline">
+            <div class="progress"></div>
+        </div>
+        <div class="controls">
+            <div class="play-container">
+                <div class="toggle-play play">
+                </div>
+            </div>
+            <div class="time">
+                <span>-</span><div class="current"></div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <script src="./audio-player.js"></script>
+</body>
+</html>

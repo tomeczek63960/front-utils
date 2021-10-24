@@ -1,0 +1,207 @@
+body {
+  padding: 100px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.audio {
+  max-width: 400px;
+}
+
+.audio audio {
+  display: none;
+}
+
+.audio-player {
+  padding: 5px 10px;
+  height: 4rem;
+  width: 100%;
+  font-size: 0.75em;
+  position: relative;
+  border-radius: 10px;
+  background: lightgray;
+}
+
+.audio-player .timeline {
+  background: white;
+  width: calc(100% - 3.3rem);
+  max-width: calc(100% - 3.3rem);
+  position: relative;
+  cursor: pointer;
+  height: 0.4rem;
+  top: 50%;
+  left: 3.1rem;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 10;
+}
+
+.audio-player .timeline .progress {
+  background: #E31F26;
+  width: 0%;
+  height: 100%;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  position: relative;
+}
+
+.audio-player .timeline .progress::after {
+  content: "";
+  height: 1.75rem;
+  width: 0.4rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #BCBEC0;
+  border-radius: 1rem;
+}
+
+.audio-player .controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 0 20px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+}
+
+.audio-player .controls > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.audio-player .controls .toggle-play.play {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  border: 7px solid transparent;
+  border-left: 10px solid white;
+}
+
+.audio-player .controls .toggle-play.play:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.audio-player .controls .toggle-play.pause {
+  height: 15px;
+  width: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.audio-player .controls .toggle-play.pause:before {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  background: white;
+  content: "";
+  height: 15px;
+  width: 3px;
+}
+
+.audio-player .controls .toggle-play.pause:after {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  background: white;
+  content: "";
+  height: 15px;
+  width: 3px;
+}
+
+.audio-player .controls .toggle-play.pause:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.audio-player .controls .time {
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: static;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  font-size: 1rem;
+  color: white;
+}
+
+.audio-player .controls .time > * {
+  padding: 2px;
+}
+
+.audio-player .controls .volume-container {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.audio-player .controls .volume-container .volume-button {
+  height: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.audio-player .controls .volume-container .volume-button .volume {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+.audio-player .controls .volume-container .volume-slider {
+  position: absolute;
+  left: -3px;
+  top: 15px;
+  z-index: -1;
+  width: 0;
+  height: 15px;
+  background: white;
+  -webkit-box-shadow: 0 0 20px #000a;
+          box-shadow: 0 0 20px #000a;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+.audio-player .controls .volume-container .volume-slider .volume-percentage {
+  background: coral;
+  height: 100%;
+  width: 75%;
+}
+
+.audio-player .controls .volume-container:hover .volume-slider {
+  left: -123px;
+  width: 120px;
+}
+/*# sourceMappingURL=audio-palyer.css.map */
